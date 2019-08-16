@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Edit Menu Item</title>
+		<link rel="stylesheet" type="text/css" href="style/style.css">
+		<script src="js/script.js"></script>
+	</head>
+	<body>
+		<header>
+			<span class="logo-name">truYum</span>
+			<img src="images/truyum-logo-light.png" class="logo-image">
+			<a href="menu-item-list-admin.html" class="edit-menu-link">Menu</a>
+			
+		</header>
+		<article>
+			<h1 class="table-head">Edit Menu Item</h1>
+			<form class="edit-item-form" action="edit-menu-item-status.html">
+				<label for="name">Name</label><br>
+				<input type="text" id="name" name="title" onkeyup="nameValidation()"><br>
+				<span id="name-validation"></span><br><br>
+				<label for="price" >Price(Rs.)</label>
+				<label for="inStock" class="in-stock">Active</label>
+				<label for="dateOfLaunch" class="date-of-launch">Date of Launch</label>
+				<label for="category" class="category">Category</label><br>
+				<input type="text" id="price" name="price" class="price-input">
+				<input type="radio" name="inStock" value="Yes" id="yes" class="radio-button" class="in-stock-input" checked="true">
+				<label for="yes" class="radio-label">Yes</label>
+				<input type="radio" name="inStock" value="No" id="no" class="radio-button" class="in-stock-input">
+				<label for="no" class="radio-label">No</label>
+				<input type="date" id="dateOfLaunch" name="dateOfLaunch" class="date-of-launch-input">
+				<select id="category" class="category-input">
+					<option></option>
+					<option>Starters</option>
+					<option>Main Course</option>
+					<option>Dessert</option>
+					<option>Drinks</option>
+				</select>
+				<br>
+				<span id="price-validation" class="price-input-valid" onkeyup="priceValidation()"></span>	
+				<span id="date-of-launch-validation" class="date-of-launch-input-valid" onkeyup="dateOfLaunch()"></span>
+				<span id="category-validation" class="category-input-valid"></span>	
+				<br>
+				<input type="checkbox" value="free" name="freeDelivery" id="freeDelivery" checked="true">
+				<label for="freeDelivery">Free Delivery</label>
+				<br><br>
+				<input type="submit" name="submit" value="Save" id="submit" onclick="validate(event)">
+			</form>
+		</article>
+		<footer>
+			<p class="footer-text">Copyright &copy; 2019</p>
+		</footer>
+	</body>
+</html>
